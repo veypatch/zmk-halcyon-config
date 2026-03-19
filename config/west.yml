@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: splitkb
       url-base: https://github.com/splitkb
+    - name: badjeff
+      url-base: https://github.com/badjeff
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -11,6 +13,9 @@ manifest:
       import: app/west.yml
     - name: zmk-halcyon-module
       remote: splitkb
+      revision: main
+    - name: zmk-behavior-battery-percentage-printer
+      remote: badjeff
       revision: main
   self:
     path: config
